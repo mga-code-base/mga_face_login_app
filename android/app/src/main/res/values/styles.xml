@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Theme applied to the Android Window while the process is starting -->
+    <style name="LaunchTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <!-- 1. Shows your solid black launch background drawable layer -->
+        <item name="android:windowBackground">@drawable/launch_background</item>
+
+        <!-- 2. Enforces a solid black canvas for the native Android 12+ splash layer -->
+        <item name="android:windowSplashScreenBackground">@android:color/black</item>
+
+        <!-- THE CORE FIX: Point the OS splash icon to a solid background color drawable.
+             This completely hides your circular launcher logo, preventing it from flashing on cold start. -->
+        <item name="android:windowSplashScreenAnimatedIcon">@android:color/black</item>
+
+        <!-- 3. Prevents the OS from flashing a separate bright startup window canvas -->
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+
+    <!-- Theme applied to the Android Window as soon as the process has started -->
+    <style name="NormalTheme" parent="@android:style/Theme.Black.NoTitleBar">
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+</resources>

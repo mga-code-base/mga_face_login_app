@@ -1,0 +1,34 @@
+name: mga_face_login_app
+description: "MGA Face Login and Member Registration App"
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  camera: ^0.11.0          # Access native device cameras
+  http: ^1.2.0            # Handle API requests
+  path_provider: ^2.1.3   # Safe local sandbox directory access
+  ffmpeg_kit_flutter_minimal: ^6.0.8 # High-speed video frame slicing tool
+  shared_preferences: ^2.3.2
+  dio: ^5.7.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter:
+  uses-material-design: true
+
+flutter_launcher_icons:
+  android: "ic_launcher"
+  ios: false
+  image_path: "assets/icon/mga_face.png" # The logo image path
+  adaptive_icon_background: "#121212"    # Sleek dark background matching your splash color
+  adaptive_icon_foreground: "assets/icon/mga_face.png"
