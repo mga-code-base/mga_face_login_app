@@ -22,7 +22,7 @@ void main() {
       await client.post('/admins/login', body: {'username': 'bob', 'password': 'pw'}, auth: false);
 
       expect(captured.method, 'POST');
-      expect(captured.url.toString(), 'https://api.06071995.xyz/api/admins/login');
+      expect(captured.url.toString(), 'https://api.06071995.xyz/api/v1/admins/login');
       expect(captured.body, '{"username":"bob","password":"pw"}');
     });
 
@@ -120,7 +120,7 @@ void main() {
       );
 
       expect(captured.method, 'POST');
-      expect(captured.url.path, '/api/face/register-video');
+      expect(captured.url.path, '/api/v1/face/register-video');
       expect(captured.fields['username'], 'bob');
       expect(captured.files.single.field, 'video');
     });
